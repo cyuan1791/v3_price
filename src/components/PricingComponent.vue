@@ -59,22 +59,3 @@ const plans = [
     </div>
   </div>
 </template>
-
-<style scoped>
-.card {
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card-price {
-  font-size: 2.5rem;
-  margin: 1.5rem 0;
-}
-
-.card-price small {
-  font-size: 1rem;
-}
-</style>
