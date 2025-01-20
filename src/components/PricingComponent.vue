@@ -40,8 +40,8 @@ const oplans = [
 
     <div class="row">
       <div class="col-md-4 mb-4" v-for="plan in plans" :key="plan.name">
-        <div class="card h-100">
-          <div class="card-body text-center">
+        <div class="card bg-transparent border-0 h-100">
+          <div class="card-body border-0 text-center">
             <h4 class="card-title">{{ plan.name }}</h4>
             <h2 class="card-price">
               ${{ isYearly ? plan.yearlyPrice : plan.monthlyPrice }}
@@ -50,7 +50,9 @@ const oplans = [
             <hr>
             <div class="list-unstyled" v-html="plan.features0">
             </div>
-            <button class="btn btn-primary btn-lg btn-block">Select Plan</button>
+          </div>
+          <div class="card-footer border-0 bg-transparent">
+            <button class="btn btn-outline-dark btn-lg btn-block">Select Plan</button>
           </div>
         </div>
       </div>
@@ -60,6 +62,7 @@ const oplans = [
 
 <style lang="css" >
 ul {
+  padding: 0;
   list-style-type: none;
 }
 </style>
