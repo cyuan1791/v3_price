@@ -3,7 +3,8 @@ import { ref } from 'vue'
 
 const isYearly = ref(false)
 
-const plans = [
+let plans = JSON.parse(atob(window.asoneData));  
+const oplans = [
   {
     name: 'Basic',
     monthlyPrice: 19,
@@ -47,11 +48,8 @@ const plans = [
               <small class="text-muted">/{{ isYearly ? 'year' : 'month' }}</small>
             </h2>
             <hr>
-            <ul class="list-unstyled">
-              <li class="mb-3" v-for="feature in plan.features" :key="feature">
-                {{ feature }}
-              </li>
-            </ul>
+            <div class="list-unstyled" v-html="plan.features0">
+            </div>
             <button class="btn btn-primary btn-lg btn-block">Select Plan</button>
           </div>
         </div>
@@ -59,3 +57,9 @@ const plans = [
     </div>
   </div>
 </template>
+
+<style lang="css" >
+ul {
+  list-style-type: none;
+}
+</style>
